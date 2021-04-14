@@ -1,0 +1,97 @@
+
+
+		body{ font-family: Open Sans, 'Open Sans', sans-serif;}
+        .cont-fluid{padding-right: 0;padding-left: 0;margin-right: 0;margin-left: 0;}
+        .header{background-color: #151c28; color: #868ca7; font-size:14px;}
+		.header .col-md-12{margin:auto ;text-align:center;}
+		.wraper1{margin-left:-15px; margin-right:-15px; padding-top:6px;}
+		.wraper1 ul li{list-style-type:none; display:block; float:left; margin-right:30px;}
+		.wraper1 ul li i{padding:5px 8px 5px 10px; font-size:18px; }
+		.wraper1 ul li span a{color: white; padding: 0px 10px}
+		.wraper1 ul li span a:hover{color:#ff3100; text-decoration:none; transition:ease-in 0.1s}
+		.wraper2 ul { padding-top: 12px;padding-bottom: 12px;}
+		.wraper2 ul li{list-style-type:none; display:block; float:left;}
+		.wraper2 ul li i{ font-size: 18px; color:white; margin:0px 0px 0px 30px}
+		.wraper2 ul li i:hover{color:#ff3100; transition:ease-in 0.2s;}
+		.info ul li {list-style-type:none;display:block;float:right;padding: 39px 15px;}
+        .info ul {margin-bottom: 0px;}
+		.info ul li a i{color :white; font-size:18px;}
+		.info ul li a{text-decoration: none;}
+		.info ul li:hover{background-color:#263349}
+		.info ul li a span {font-size:14px; font-weight:700;color: white; padding-left:15px;}
+		.info ul li a sup {color:red; font-weight:700; font-size: 12px;}
+	
+	   .banner3{background-color:#f4f5fb; padding-top: 20px;}
+		.banner3 .well {min-height:360px; background-color:white; border: 1px solid white; box-shadow: 1px 1px 20px 1px #cbcedb;}
+        .banner3 .products p .baj {font-size: 12px; color: white !important; background-color: #ff3100!important;border-bottom-right-radius: 3px;border-top-right-radius: 3px;margin-left: -20px; padding: 3px 15px;}
+        .banner3 .products p .price {float: right; color:#ff3100; border-bottom: 2px solid #ff3100;}
+        .banner3 .products p del {float: right; color:#a0a6c5; padding-right: 5px;}
+        .banner3 .products p {color:#a0a6c5; font-size: 14px; font-weight: 700;} 
+        .banner3 .products h4 {font-weight: 700; color: #283346; padding-top: 15px;}
+        .banner3 .main-list {background-color: white; border : 1px solid #d7dae0;padding: 10px}
+        .banner3 .main-list h3 {font-size:22px;font-weight: 500; font-family: fantasy;}
+        .banner3 .main-list h4 {font-size:20px;font-weight: 100!important; padding-bottom: 20px}
+        .banner3 .main-list h5 {font-size: 18px; font-weight: bold; padding-top: 10px; padding-bottom: 10px;}
+        .banner3 .main-list p a{text-decoration: none; font-size: 13px}
+        .banner3 .main-list hr {margin: 12px 0px}
+        .banner3 .sorter {border : 1px solid #d7dae0; padding-top: 15px; padding-bottom: 0px; background-color: white; border-radius:3px;margin-bottom: 20px;}
+        .banner3 .sorter .amount {padding-top: 5px;}
+        .paginate-b{border: 1px solid #d7dae0; border-radius: 2px; margin: 20px 0px 30px; background-color: white;}
+        .paginate {
+		text-align: center;}
+		  .paginate ul {
+		  	text-align: center;
+		    list-style: none;
+		    margin: 0;
+		    padding: 0;}
+		  .paginate .prev{float:left;}
+		  .paginate .next{float:right;}
+		  .paginate li {
+		    display: inline;}
+		  .paginate a {
+		  	padding: 10px;
+		    display: inline-block;
+		    text-decoration: none;
+		    color: #717171;
+		    font-size: 18px;
+		    font-family: sans-serif;
+		    text-shadow: white 0 1px 0;}
+		    .paginate a:first-child, .paginate a.first {
+		      margin-left: 0; }
+		    .paginate a:last-child, .paginate a.last {
+		      margin-right: 0; }
+		    .paginate a:hover, .paginate a:focus {
+		      color: #ff3100; }
+		    .paginate a.more {
+		      box-shadow: 0 0 0 0 transparent;
+		      border: 0 none;
+		      background: transparent;
+		      margin-left: 0;
+		      margin-right: 0; }
+		    .paginate a.active {
+		      color: #f2f2f2;
+		      text-shadow: black 0 1px 0;
+		      background-color: #ff3100!important;}
+
+        .footer{background-color: #18202e; min-height: 215px;padding-top: 30px;}
+        .footer .fh5{font-size: 18px; color: #868ca7; font-family: sans-serif;}
+        .footer .fh5 a{color: white; border-bottom: 2px solid #ff3100}
+        .footer .fh5 a:hover{text-decoration: none; border: none; transition: ease-in 0.6s;}
+        .footer ul {padding-left: 0px;} 
+        .footer .footerlinks li {list-style: none; line-height: 30px; font-size: 15px;}
+        .footer .footerlinks li a {color:white;text-decoration: none;}
+        .footer .footerlinks li a:hover{border-bottom:1px solid white ;transition: 0.2s;}
+        .footer .fsmlinks{padding-left: none; padding-top: 20px;}
+        .footer .fsmlinks li{list-style-type:none; display:block; float: left; padding-right: 50px;}
+        .footer .fsmlinks li i{ font-size:20px; color:white;}
+        .footer .fsmlinks li i:hover{color:#ff3100;  transition:ease-in 0.2s;}
+        .footer .fsm-ul {padding-left: 0px; padding-right: 0px;}
+        .footer form button {background-color:#ff3100;color: white;font-weight: 700;padding: 7px 15px; border-top-right-radius: 3px; border-bottom-right-radius: 3px border-left:1px solid #18202e;}
+        .footer form button:hover {background-color: #ff4f05;color: white; }
+        .footer form button:focus {background-color: #ff4f05;color: white; }
+        .footer form button:active {background-color: #ff4f05;color: white; }
+        .footer form input {background-color: #18202e ;padding: 17px 10px; border-top-left-radius: 2px; border-bottom-left-radius: 2px; border-color:#324057; }
+        .footer form {padding-left: 0px;margin-top: 20px;}
+        .endcr{background-color: #18202e; border-top:1px solid #324057;}
+        .endcr p {color:#324057;padding: 15px 0px 10px;}
+        
