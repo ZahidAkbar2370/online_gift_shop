@@ -1,0 +1,9 @@
+Online Gift Shop developed in Core PHP and also exist on GITHUB.
+
+admin login
+
+localhost/online_gift_shop/admin/login.php
+
+username: admin@gmail.com
+password: admin
+

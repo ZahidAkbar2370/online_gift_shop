@@ -35,6 +35,10 @@ if(!isset($_SESSION["user"]))
                 <tr>
                   <th>Order No</th>
                   <th>Buyer Name</th>
+                  <th>Buyer Email</th>
+                  <th>Buyer Address</th>
+                  <th>Buyer Contact</th>
+                  <th>Ordered Products QTY</th>
                   <th>Price</th>
                   <th>Order Date</th>
                   <th>View Detail</th>
@@ -68,13 +72,33 @@ if(!isset($_SESSION["user"]))
  
 while ($row1 = mysqli_fetch_array($result1)) {
   $buyer_name=$row1['buyer_name'];
+  $buyer_email=$row1['buyer_email'];
+  $buyer_address=$row1['buyer_address'];
+  $buyer_phone=$row1['buyer_phone'];
+?>
+
+
+<?php
+
+  $add_cat2 = "select count(*) from order_detail where order_id =" . $id;
+  $result2 = $con->query($add_cat2);
+ 
+  // $row1 = mysqli_fetch_array($result1);
+
+while ($row2 = mysqli_fetch_array($result2)) {
+    
 ?>
   
 
               <tbody>
                 <tr class="gradeX" align="center">
+
                   <td><?php echo $id; ?></td>
                   <td><?php echo $buyer_name; ?></td>
+                  <td><?php echo $buyer_email; ?></td>
+                  <td><?php echo $buyer_address; ?></td>
+                  <td><?php echo $buyer_phone; ?></td>
+                  <td><?php echo $row2[0]; ?></td>
                   <td><?php echo $pro_price; ?></td>
                   <td><?php echo $order_date; ?></td>
                   <td><a href="view_order_detail.php?view_order=<?php echo $id; ?>">Detail</td>
@@ -84,6 +108,7 @@ while ($row1 = mysqli_fetch_array($result1)) {
                   <!-- <td><a href="#">X</td> -->
                 </tr>
 <?php
+}
 }
 }
 ?>      

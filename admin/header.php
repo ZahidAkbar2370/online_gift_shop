@@ -42,7 +42,7 @@ if(!isset($_SESSION["user"]))
   <ul class="nav">
     <h1  class="dropdown" id="profile-messages" >
     </h1>
-    <h1 style="color:#F3ECED; ">Admin Pannel</h1>
+    <h1 style="color:#F3ECED; ">ONLINE GIFT SHOP</h1>
   </ul>
 </div>
 <!--close-top-Header-menu-->

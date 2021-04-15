@@ -1,7 +1,7 @@
 <!--Footer-part-->
 
 <div class="row-fluid">
-  <div id="footer" class="span12"> 2013 &copy; Virtual University of Pakistan</div>
+  <div id="footer" class="span12"> 2021 &copy; Online Gift Shop</div>
 </div>
 
 <!--end-Footer-part-->

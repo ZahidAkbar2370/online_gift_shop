@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2021 at 08:48 PM
+-- Generation Time: Apr 15, 2021 at 06:22 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `autoshop`
+-- Database: `online_gift_shop`
 --
 
 -- --------------------------------------------------------
@@ -97,7 +97,8 @@ CREATE TABLE `buyer_orders` (
 
 INSERT INTO `buyer_orders` (`id`, `buyer_id`, `pro_price`, `order_date`) VALUES
 (1, 1, 5, '2021-04-14 17:55:47.406284'),
-(2, 1, 33, '2021-04-14 18:33:23.884990');
+(2, 1, 33, '2021-04-14 18:33:23.884990'),
+(3, 1, 7, '2021-04-15 03:46:42.250332');
 
 -- --------------------------------------------------------
 
@@ -150,7 +151,8 @@ CREATE TABLE `order_detail` (
 INSERT INTO `order_detail` (`Id`, `order_Id`, `pro_id`, `qty`) VALUES
 (1, 1, 2, 1),
 (2, 2, 1, 4),
-(3, 2, 2, 1);
+(3, 2, 2, 1),
+(4, 3, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -205,7 +207,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`pro_id`, `cat_id`, `brand_id`, `pro_name`, `pro_image1`, `pro_image2`, `pro_price`, `pro_des`, `pro_status`) VALUES
-(1, 1, 1, 'Pen', '', '', '7', 'Auto Mart-Online Auto Parts Shop stands as one of the most trusted internet retailers online. Dedication, commitment to quality service, high level of professionalism and product dependability and competitive prices are reasons that underlie our success in the auto industry. Through the years of providing superior quality automotive parts and accessories nationwide, our company has been distinguished as one of the most established auto parts retailers online. We have a team of professionals fervently working to give you a complete and most competitive line of automotive parts and the best customer support as well. Our company upholds its commitment to serve all your car parts needs by continuously replenishing our stock and by continuously improving our services. ', ''),
+(1, 2, 1, 'Pen', '', '', '7', 'Auto Mart-Online Auto Parts Shop stands as one of the most trusted internet retailers online. Dedication, commitment to quality service, high level of professionalism and product dependability and competitive prices are reasons that underlie our success in the auto industry. Through the years of providing superior quality automotive parts and accessories nationwide, our company has been distinguished as one of the most established auto parts retailers online. We have a team of professionals fervently working to give you a complete and most competitive line of automotive parts and the best customer support as well. Our company upholds its commitment to serve all your car parts needs by continuously replenishing our stock and by continuously improving our services. ', ''),
 (2, 2, 2, 'Pencile', '', '', '5', 'none', '');
 
 --
@@ -298,7 +300,7 @@ ALTER TABLE `buyers`
 -- AUTO_INCREMENT for table `buyer_orders`
 --
 ALTER TABLE `buyer_orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `cart`
@@ -316,7 +318,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `order_detail`
 --
 ALTER TABLE `order_detail`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `payments`
