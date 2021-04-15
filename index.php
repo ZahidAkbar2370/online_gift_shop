@@ -81,7 +81,7 @@ $resultcat_count =  mysqli_num_rows($result_cat);
                                     ?> 
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 products">
                                 <div class="well">
-                                    <a href="details.php?product_detail=<?php echo $row['pro_id']; ?>"><img class="img-responsive" src="images/products/gift.jpg" alt="img"></a>
+                                    <a href="details.php?product_detail=<?php echo $row['pro_id']; ?>"><img class="img-responsive" src="admin/images/<?php echo $row['pro_image1'] ?>" alt="img" style="width: 200px;height:150px;"></a>
                                     <h4><?php echo $row['pro_name'] ?></h4>
                                     <p><?php echo $row['cat_name'] ?><span class="price"><?php echo $row['pro_price'] ?></span></p>
                                 </div>

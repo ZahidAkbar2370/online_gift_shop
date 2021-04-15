@@ -64,7 +64,7 @@ if(!isset($_SESSION["user"]))
                   <td><?php echo $row['brand_name'];  ?></td>
                    <td><?php echo $row['pro_price'];  ?></td>
                   
-                <td><img width="200" src="../images/products/<?php echo $row['pro_image1'] ?>"></td>
+                <td><img width="80" src="images/<?php echo $row['pro_image1'] ?>"></td>
                  <td> Active </td>
                  <td> <a href="edit_product.php?edit_product=<?php echo $row['pro_id']; ?>"> Edit </td>
                 <td><a href="edit_product.php?delete_pro=<?php echo $row['pro_id'] ?>">DELETE</td>

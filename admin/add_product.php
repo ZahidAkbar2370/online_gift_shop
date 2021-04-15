@@ -56,8 +56,9 @@ if($name=='' || $price=='' || $product_category=='' || $brand=='' || $descriptio
 
 
 
-   $add_product_query = "insert into products (pro_name, pro_price, cat_id, brand_id, pro_des, pro_image1, pro_image2) values ('$name','$price', $product_category, $brand,'$description','','')";
-
+   $add_product_query = "insert into products (pro_name, pro_price, cat_id, brand_id, pro_des, pro_image1, pro_image2) values ('$name','$price', $product_category, $brand,'$description','$image1','')";
+// print_r($add_product_query);
+// die();
   if ($con->query($add_product_query) === TRUE) {
      echo "<script>alert('Product Added Successfully')</script>";
     echo "<script>window.open('add_product.php','_self')</script>";
@@ -162,7 +163,7 @@ if($name=='' || $price=='' || $product_category=='' || $brand=='' || $descriptio
     <input id="filebutton" name="image1" class="input-file" type="file">
   </div>
 </div>
-<!-- File Button --> 
+
 <!-- <div class="form-group">
   <label class="col-md-4 control-label" for="filebutton">AUXILIARY IMAGE</label>
   <div class="col-md-4">
@@ -178,7 +179,6 @@ if($name=='' || $price=='' || $product_category=='' || $brand=='' || $descriptio
   </div>
   </div>
 
-</fieldset>
 </form>
 
 

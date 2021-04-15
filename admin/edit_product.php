@@ -55,8 +55,8 @@ if(isset($_GET['edit_product'])){
    $update_product_query = "UPDATE products SET pro_name = '$name', pro_price = '$price', cat_id = $category, brand_id = $brand, pro_des = '$description'  WHERE pro_id = $pro_id ";
    
 
-  //saving image to directory
-  // $uploaddir = '../images/products/';
+  // saving image to directory
+  // $uploaddir = '/images';
   // $uploadfile = $uploaddir . basename($_FILES['image1']['name']);
 
   // if (move_uploaded_file($_FILES['image1']['tmp_name'], $uploadfile)) {
