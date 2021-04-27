@@ -17,6 +17,20 @@ class orderlineitem {
     
 }
 
+class paymentlineritem {
+    public $pay_account_no = 0;
+    public $pay_amount = 0;
+    public $date = 0;
+    public function __construct($account_no, $pay_amount,$date) {
+        $this->pay_account_no = $account_no;
+        $this->pay_amount = $pay_amount;
+        $this->date = $date;
+        }
+    
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -68,16 +82,17 @@ class orderlineitem {
                     	
 				if(!isset($_SESSION['user'])){
 							
-					echo "<a href='login_register.php'><b style='color:white'>Login/Register</b></a>";		
+					echo "<a href='login.php'><b style='color:white;margin-right:10px'>Login</b></a>";
+                    echo "<a href='register.php'><b style='color:white;margin-left:5px'>Register</b></a>";		
 				}
 				else{
 								
-					
+					echo "<a href='profile.php'><i class='fa fa-user-o' style='margin-right:25px'></i></a>"  ;
                     echo "<a href='logout.php'><b style='color:white'>Logout</b></a>"	;			
 					}
 				?>  
                                 </a></li>
-                                <li><a href="#"><i class="fa fa-user-o"></i></a></li>
+                                <!-- <li><a href="profile.php"><i class="fa fa-user-o"></i></a></li> -->
                                 <li><a href="cart.php"><i class="fa fa-shopping-cart"></i><sup> </sup><span>
                                     
                                     <?php

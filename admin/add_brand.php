@@ -40,36 +40,46 @@ if(isset($_POST['add_brand'])){
 
 <!-- Form Name -->
 <br><br>
+<div class="container">
+  
+  <div class="row">
+    <div class="col-md-2">
+      
+    </div>
+
+    <div class="col-md-8 panel">
+      <h2 style="margin-left:25px;">Add Brand</h2>
+  <br>
+
+  <form class="form-horizontal" action="" method="POST">
 
 
-<h2 style="margin-left:25px;">Add Brand</h2>
-<br>
 
-<form class="form-horizontal" action="" method="POST">
-
-
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="product_name">BRAND NAME</label>  
-  <div class="col-md-4">
-  <input id="product_name" name="brand_name" placeholder="BRAND NAME" class="form-control input-md" required="" type="text">
-    
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="product_name">BRAND NAME</label>  
+    <div class="col-md-4">
+    <input id="product_name" name="brand_name" placeholder="BRAND NAME" class="form-control input-md" required="" type="text">
+      
+    </div>
   </div>
-</div>
-<!-- Button -->
-<div class="form-group">
-  <div class="col-md-5">
-    <button id="singlebutton" name="add_brand" class="btn btn-primary" style="float:right;">ADD BRAND</button>
-    
+  <!-- Button -->
+  <div class="form-group">
+    <div class="col-md-5">
+      <button id="singlebutton" name="add_brand" class="btn btn-primary" style="float:right;">ADD BRAND</button>
+      
+    </div>
+    </div>
+
+  </form>
+      </div>
+    </div>
+
   </div>
-  </div>
-
-</form>
 
 
-</div>
-</div>
+
+
 </div>
 
 <?php

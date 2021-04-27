@@ -70,9 +70,9 @@ if(isset($_POST['quantity'])){
 
                                    <div class="bg">
                             <div class="col-md-3 img">
-                                <img class="img-responsive" style="height:200px;" src="images/products/gift.jpg">
+                                <img class="img-responsive" style="height:200px;" src="admin/images/products/gift.jpg">
                             </div>
-                            <div class="col-md-3 hd">
+                            <div class="col-md-3 hd walls">
                                 <h6><?php echo $orderlineitem->category ?></h6>
                                 <h4><?php echo $orderlineitem->name ?></h4>
                             </div>

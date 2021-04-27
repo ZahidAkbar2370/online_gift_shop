@@ -25,7 +25,7 @@ if(isset($_SESSION["Order"]))
   $user = $_SESSION['user'];
   $buyer_id=$user['buyer_id'];
 
-  $add_order = "insert into buyer_orders (buyer_id,pro_price) values ( ".$buyer_id." , ". $totalamount .")";
+  $add_order = "insert into buyer_orders(buyer_id,pro_price) values ( ".$buyer_id." , ". $totalamount .")";
 
 	$exe_brand = mysqli_query($con, $add_order);
 
@@ -43,6 +43,7 @@ foreach ($Order as $orderlineitem1)
   }
  
  unset($_SESSION['Order']);
+ unset($_SESSION['Payement']);
 
 
 

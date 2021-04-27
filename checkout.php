@@ -1,15 +1,52 @@
 <?php
-
 @include('header.php');
 
-
+include("connection.php");
 if(!isset($_SESSION["user"]))
 {
       echo "<script>window.open('login_register.php','_self')</script>";
       die();
 }
 
+if(isset($_POST['confirm_order']))
+{
+    // print_r($_SESSION['Order'][0]->pro_id);
+    // die();
+  $select_order_id="SELECT id FROM buyer_orders";
+  $result = $con->query($select_order_id);
 
+    // print_r($result->num_rows);
+    // die();
+  $get_order_id=($result->num_rows)+1;
+
+  
+
+    $account_no = $_POST['account_no'];
+    $account_password = $_POST['account_password'];
+    $pay_account = $_POST['pay_account'];
+    $date = date("d m YY");
+
+    $paymentlineritem = new paymentlineritem($account_no,$pay_account,$date);
+
+        $Payement = array($paymentlineritem);    
+
+        $_SESSION['Payement'] = $Payement;
+
+    
+
+    $insert="insert into payments(pay_id,amount,pay_date) values ('$get_order_id','$pay_account', '$date')";
+
+    if ($con->query($insert) === TRUE) {
+     echo "<script>alert('Payement Successfully')</script>";
+    echo "<script>window.open('confirm.php','_self')</script>";
+    
+  } else {
+      echo "Error: " . $insert . "<br>" . $con->error;
+  }
+
+        
+
+}
 
 ?>
 
@@ -33,6 +70,7 @@ if(!isset($_SESSION["user"]))
                               if(isset($_SESSION['Order']))
                               {
                                 $Order = $_SESSION['Order'];
+                                
                                 $totalamout = 0;
                                 foreach($Order as $orderlineitem)
                                 {
@@ -61,9 +99,23 @@ if(!isset($_SESSION["user"]))
                           </table>
 
                           <div>
-                         
-                          <a href="cart.php"><button>Back to Edit</button></a>
-                           <a href="confirm.php"> <button>Confirm Order</button> </a>
+                         <form action="" method="POST">
+                          <h3>Payement</h3>
+
+                            <input type="text" name="account_no" required="" placeholder="Enter Account #">
+
+                            <input type="password" name="account_password" required="" placeholder="Password">
+
+                            <input type="number" name="pay_account"  value="<?php echo  $totalamout;?>" >
+
+                            <br><br>
+
+                            <a href="cart.php"><button>Back to Edit</button></a>
+                           <button name="confirm_order">Confirm Order</button>
+                          </form>
+                          
+                          
+                          
                           </div>
                         </div>
                     </div>

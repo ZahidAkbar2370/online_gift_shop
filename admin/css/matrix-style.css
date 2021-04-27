@@ -201,9 +201,10 @@ hr{ border-top-color:#dadada;}
 	position: relative;
 	min-height:100%;
 	width: auto;
+	background-color: white !important;
 }
 #content-header {
-	position: abslute;
+	position: absolute;
 	width: 100%;
 	margin-top: -38px;
 	z-index: 20;
@@ -1141,6 +1142,7 @@ form {
 	padding: 10px 0;
 }
 .form-horizontal input[type=text], .form-horizontal input[type=password], .form-horizontal textarea {
+	
 }
 .row-fluid .span20 {
 	width:97.8%

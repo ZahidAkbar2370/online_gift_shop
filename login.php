@@ -1,8 +1,6 @@
-
 <?php
 
-// Start the session
-session_start();
+@include('header.php');
 
 if(isset($_SESSION["user"]))
 {
@@ -10,40 +8,42 @@ if(isset($_SESSION["user"]))
       die();
 }
 
+include"connection.php";
 
-$error = "";
 
 if(isset($_POST['loginsubmit'])){
+$user_login_query = "Select * from buyers where buyer_email = '" . $_POST['email'] . "' and  buyer_password = '" . $_POST['password'] . "'";
 
-if($_POST['email'] == 'admin@gmail.com' && $_POST['password'] = '123$$'){
-      $_SESSION["user"] = 'admin@gmail.com';
+$user_result = $con->query($user_login_query);
+$num_rows = mysqli_num_rows($user_result);
+
+if($num_rows>0){
+    $user = mysqli_fetch_array($user_result);
+    $_SESSION["user"] = $user;
       echo "<script>window.open('index.php','_self')</script>";
 }
 else
 {
-    $error= "Invalid Login Detais";
+     echo "<script>alert('Invalid Something')</script>";
+     echo "<script>window.open('login.php','_self')</script>";
 }
 
 }
+
+
+
+
+
 ?>
 
-<html>
-<head>
-<title>Admin</title>
-<meta charset="UTF-8" />
 
-<link rel="stylesheet" href="css/bootstrap.min.css" />
-<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
-
-</head>
-
-<body style="background-color: #f4f5fb;margin-top: 80px">
-<div class="container">
-    <div class="row">
-    	<div class="col-md-3">
-    		
-    	</div>
-    	<div class="col-md-6 panel" style="margin-top: 50px">
+                <div class="wrapper">
+                    <div class="container"></div>
+                    <div class="container">
+                        <div class="col-md-3">
+                            
+                        </div>
+                        <div class="col-md-6 pannel" style="margin-top: 50px">
                             <h1>Login</h1>
                             <form method="post" action="">
                                     <div class="form-group">
@@ -58,12 +58,13 @@ else
                                   
                                 </form>
                         </div>
-	
-	</div>
-</div>
+                       
+                    </div>
+                </div>
 
 
-<span> <?php echo $error; ?>
+<?php 
 
-</body>
-</html>
+@include('footer.php');
+
+?>

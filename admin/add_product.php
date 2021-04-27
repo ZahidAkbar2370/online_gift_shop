@@ -77,8 +77,12 @@ if($name=='' || $price=='' || $product_category=='' || $brand=='' || $descriptio
 
 
 <div id="content">
-
-
+  <div class="container">
+  <div class="row">
+<div class="col-md-2">
+  
+</div>
+<div class="col-md-8 panel" style="margin-top: 30px">
 <!-- Form Name -->
 <br><br>
 
@@ -86,20 +90,21 @@ if($name=='' || $price=='' || $product_category=='' || $brand=='' || $descriptio
 <h2 style="margin-left:25px;">Add Product</h2>
 <br>
 
-        	<form class="form-horizontal" action="" method="POST"  enctype="multipart/form-data">
+          <form class="form-horizontal" action="" method="POST"  enctype="multipart/form-data">
 
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="product_name">PRODUCT NAME</label>  
   <div class="col-md-4">
-  <input id="product_name" name="name" placeholder="PRODUCT NAME" class="form-control input-md" required="" type="text">
+  <input id="product_name" name="name" placeholder="PRODUCT NAME" class="form-control input-md" required="" type="text" style="width: 300px">
     
   </div>
 </div>
+
 <div class="form-group">
   <label class="col-md-4 control-label" for="product_name">PRODUCT PRICE</label>  
   <div class="col-md-4">
-  <input id="product_name" name="price" placeholder="PRODUCT PRICE" class="form-control input-md" required="" type="text">
+  <input id="product_name" name="price" placeholder="PRODUCT PRICE" class="form-control input-md" required="" type="number" style="width: 300px">
     
   </div>
 </div>
@@ -112,7 +117,7 @@ if($name=='' || $price=='' || $product_category=='' || $brand=='' || $descriptio
   <div class="col-md-4">
     <?php
 
-    echo "<select id='product_categorie' name='category' class='form-control'>";
+    echo "<select id='product_categorie' name='category' class='form-control' style='width: 300px'>";
 
       if (mysqli_num_rows($category) > 0) {
       while($row = mysqli_fetch_assoc($category)) {
@@ -130,7 +135,7 @@ if($name=='' || $price=='' || $product_category=='' || $brand=='' || $descriptio
   <div class="col-md-4">
      <?php
 
-    echo "<select id='product_categorie' name='brand' class='form-control'>";
+    echo "<select id='product_categorie' name='brand' class='form-control' style='width: 300px'>";
 
       if (mysqli_num_rows($result) > 0) {
       while($row = mysqli_fetch_assoc($result)) {
@@ -152,7 +157,7 @@ if($name=='' || $price=='' || $product_category=='' || $brand=='' || $descriptio
 <div class="form-group">
   <label class="col-md-4 control-label" for="product_description">PRODUCT DESCRIPTION</label>
   <div class="col-md-4">                     
-    <textarea id="product_name" name="desc" class="form-control input-md" required cols="8" rows="9"></textarea>
+    <textarea id="product_name" placeholder="PRODUCT DESCRIPTION" name="desc" class="form-control input-md" required cols="8" rows="9" style="width: 300px"></textarea>
   </div>
 </div>
 
@@ -185,6 +190,8 @@ if($name=='' || $price=='' || $product_category=='' || $brand=='' || $descriptio
 </div>
 </div>
 </div>
+</div>
+
 
 <?php
 

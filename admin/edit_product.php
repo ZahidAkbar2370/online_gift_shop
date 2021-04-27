@@ -85,8 +85,12 @@ if(isset($_GET['edit_product'])){
 
 
 <div id="content">
-
-
+ <div class="container">
+  <div class="row">
+<div class="col-md-2">
+  
+</div>
+<div class="col-md-8 panel" style="margin-top: 30px">
 <!-- Form Name -->
 <br><br>
 
@@ -104,14 +108,14 @@ if(isset($_GET['edit_product'])){
 <div class="form-group">
   <label class="col-md-4 control-label" for="product_name">PRODUCT NAME</label>  
   <div class="col-md-4">
-  <input id="product_name" name="name" value="<?php echo $row['pro_name']; ?>" placeholder="PRODUCT NAME" class="form-control input-md" required="" type="text">
+  <input id="product_name" name="name" value="<?php echo $row['pro_name']; ?>" placeholder="PRODUCT NAME" class="form-control input-md" required="" type="text" style="width: 300px">
     
   </div>
 </div>
 <div class="form-group">
   <label class="col-md-4 control-label" for="product_name">PRODUCT PRICE</label>  
   <div class="col-md-4">
-  <input id="product_name" name="price" value="<?php echo $row['pro_price']; ?>" placeholder="PRODUCT PRICE" class="form-control input-md" required="" type="text">
+  <input id="product_name" name="price" value="<?php echo $row['pro_price']; ?>" placeholder="PRODUCT PRICE" class="form-control input-md" required="" type="number" style="width: 300px">
     
   </div>
 </div>
@@ -119,7 +123,7 @@ if(isset($_GET['edit_product'])){
 <div class="form-group">
   <label class="col-md-4 control-label" for="product_description">PRODUCT DESCRIPTION</label>
   <div class="col-md-4">                     
-    <textarea name="desc" class="form-control input-md" required="" cols="8" rows="9"><?php echo $row['pro_des']; ?></textarea>
+    <textarea name="desc" class="form-control input-md" required="" cols="8" rows="9" style="width: 300px"><?php echo $row['pro_des']; ?></textarea>
   </div>
 </div>
 
@@ -130,7 +134,7 @@ if(isset($_GET['edit_product'])){
   <div class="col-md-4">
     <?php
 
-    echo "<select id='product_categorie' name='category' class='form-control'>";
+    echo "<select id='product_categorie' name='category' class='form-control' style='width: 300px'>";
 
       if (mysqli_num_rows($result_cat) > 0) {
       while($row_cat = mysqli_fetch_assoc($result_cat)) {
@@ -148,7 +152,7 @@ if(isset($_GET['edit_product'])){
   <div class="col-md-4">
      <?php
 
-    echo "<select id='product_categorie' name='brand' class='form-control'>";
+    echo "<select id='product_categorie' name='brand' class='form-control' style='width: 300px'>";
 
      if (mysqli_num_rows($result_brand) > 0) {
       while($row_brand = mysqli_fetch_assoc($result_brand)) {
@@ -176,13 +180,7 @@ if(isset($_GET['edit_product'])){
     <input id="filebutton" name="image1" class="input-file" type="file">
   </div>
 </div>
-<!-- File Button --> 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="filebutton">AUXILIARY IMAGE</label>
-  <div class="col-md-4">
-    <input id="filebutton" name="image2" class="input-file" type="file">
-  </div>
-</div>
+
 
 <!-- Button -->
 <div class="form-group">

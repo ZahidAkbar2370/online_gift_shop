@@ -37,36 +37,9 @@ else
 ?>
 
                 <div class="banner3">
-                    <div class="container">
-                    	<div class="col-md-3">
-                    		<div class="main-list">
-                    			<h3>Shop By</h3>
-                    			<hr>
-                    			<h4>Shopping Options</h4>
-                                <p><a href="all_products.php">All Products</a></p><hr>
-                    			<h5>Categories</h5>
-                                <?php
-                    			if (mysqli_num_rows($result_category) > 0) {
-                                while($row_category = mysqli_fetch_assoc($result_category)) {
-                                    ?>
-                                <p><a href="all_products.php?category=<?php echo $row_category['cat_id']; ?>"><?php echo $row_category['cat_name']; ?></a></p><hr>
-                                <?php 
-                            }
-                                }
-                                ?>
-                                <h5>Brands</h5>
-                                <?php
-                                if (mysqli_num_rows($result_brand) > 0) {
-                                while($row_brand = mysqli_fetch_assoc($result_brand)) {
-                                    ?>
-                    			<p><a href="all_products.php?brand=<?php echo $row_brand['brand_id']; ?>"><?php echo $row_brand['brand_name'];  ?></a></p><hr>
-                                <?php 
-                            }
-                        }
-                                ?>
-                    		</div>
-                    	</div>
-                    	<div class="col-md-9">
+                    <div class="container well">
+                    	
+                    	<div class="col-md-12">
                     		<div class=" col-md-12 sorter">
                     			<div class="col-md-7">
                                     <?php if($result_count> 0) { ?>

@@ -36,8 +36,7 @@ if(!isset($_SESSION["user"]))
                 <tr>
                   <th>Brand ID</th>
                   <th>Brand Name</th>
-                  <th>UPDATE</th>
-                  <th>DELETE</th>
+                  <th>Action</th>
                 </tr>
               </thead>
  
@@ -55,8 +54,8 @@ if(!isset($_SESSION["user"]))
                 <tr class="gradeX" align="center">
                   <td><?php echo $brand_id; ?></td>
                   <td><?php echo $brand_name; ?></td>
-                  <td><a href="edit_brand.php?edit_brand=<?php echo $brand_id; ?>">Edit</td>
-                  <td><a href="delete_brand.php?delete_brand=<?php echo $brand_id; ?>">X</td>
+                  <td><a href="edit_brand.php?edit_brand=<?php echo $brand_id; ?>"><i class="fa fa-edit"></i>
+                  <a href="delete_brand.php?delete_brand=<?php echo $brand_id; ?>"><i class="fa fa-trash" style="margin-left: 20px"></i></td>
                 </tr>
  <?php } ?>             
               </tbody>

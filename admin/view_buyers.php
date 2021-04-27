@@ -40,8 +40,6 @@ if(!isset($_SESSION["user"]))
                   <th>Phone No</th>
                   <th>Postal Code</th>
                   <th>Image</th>
-                  <th>UPDATE</th>
-                  <th>DELETE</th>
                 </tr>
               </thead>
               <tbody>
@@ -72,8 +70,7 @@ if(!isset($_SESSION["user"]))
                   <td><?php echo $buyer_phone; ?></td>
                   <td><?php echo $postal_code; ?></td>
                   <td><img src="<?php echo $buyer_image; ?>"><?php echo $buyer_image; ?></td>
-                  <th><a href="#">Edit</th>
-                  <td><a href="#">X</td>
+                  
                 </tr>
        <?php } ?>  
               </tbody>

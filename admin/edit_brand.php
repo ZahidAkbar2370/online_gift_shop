@@ -58,7 +58,12 @@ if(isset($_GET['delete_brand'])){
 ?>
 
 <div id="content">
-
+ <div class="container">
+  <div class="row">
+<div class="col-md-2">
+  
+</div>
+<div class="col-md-8 panel" style="margin-top: 30px">
 
 <!-- Form Name -->
 <br><br>

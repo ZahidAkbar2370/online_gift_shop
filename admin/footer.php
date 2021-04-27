@@ -1,7 +1,7 @@
 <!--Footer-part-->
 
 <div class="row-fluid">
-  <div id="footer" class="span12"> 2021 &copy; Online Gift Shop</div>
+  <div id="footer" class="span12"> <span style="color: white">2021 &copy; Online Gift Shop By Ayesha</span> </div>
 </div>
 
 <!--end-Footer-part-->

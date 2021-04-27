@@ -33,11 +33,14 @@ if(isset($_POST['add_cat'])){
 ?>
 
 <div id="content">
+<div class="container">
+	<div class="row">
+		<div class="col-md-2">
+			
+		</div>
 
-
-<!-- Form Name -->
-<br><br>
-
+		<div class="col-md-8 panel" style="margin-top: 50px">
+			
 
 <h2 style="margin-left:25px;">Add Category</h2>
 <br>
@@ -63,11 +66,11 @@ if(isset($_POST['add_cat'])){
 
 
 </form>
+		</div>
+	</div>
+</div>
 
 
-</div>
-</div>
-</div>
 
 <?php
 

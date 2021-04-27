@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2021 at 06:22 AM
+-- Generation Time: Apr 26, 2021 at 04:51 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -49,8 +49,7 @@ CREATE TABLE `brands` (
 --
 
 INSERT INTO `brands` (`brand_id`, `brand_name`) VALUES
-(1, 'Local'),
-(2, 'Pilot');
+(1, 'Local');
 
 -- --------------------------------------------------------
 
@@ -76,7 +75,9 @@ CREATE TABLE `buyers` (
 --
 
 INSERT INTO `buyers` (`buyer_id`, `buyer_name`, `buyer_email`, `buyer_password`, `buyer_country`, `buyer_city`, `buyer_address`, `buyer_phone`, `buyer_image`, `postal_code`) VALUES
-(1, 'Zahid', 'janujakhar2370@gmail.com', '12345678', 'Pakistan', 'Layyah', 'ward # 5, Layyah', 2147483647, 'images.jpg', 0);
+(1, 'Zahid', 'janujakhar2370@gmail.com', '12345678', 'Pakistan', 'Layyah', 'ward # 5, Layyah', 2147483647, 'images.jpg', 0),
+(2, 'khan', 'khan@gmail.com', '12345678', 'USA', 'Islamabad', 'Lahore', 2147483647, 'download (2).png', 0),
+(3, 'ali', 'ali@gmail.com', 'ali', 'ali', 'ali', 'ali', 878, 'gettyimages-1025433052-612x612.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -96,9 +97,8 @@ CREATE TABLE `buyer_orders` (
 --
 
 INSERT INTO `buyer_orders` (`id`, `buyer_id`, `pro_price`, `order_date`) VALUES
-(1, 1, 5, '2021-04-14 17:55:47.406284'),
-(2, 1, 33, '2021-04-14 18:33:23.884990'),
-(3, 1, 7, '2021-04-15 03:46:42.250332');
+(1, 2, 20, '2021-04-26 10:04:30.798398'),
+(2, 2, 20, '2021-04-26 10:19:33.981570');
 
 -- --------------------------------------------------------
 
@@ -128,8 +128,28 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`cat_id`, `cat_name`) VALUES
-(1, 'birthday gift'),
-(2, 'Weeding Gift');
+(1, 'birthday gift');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` int(11) NOT NULL,
+  `name` varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `message` varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`id`, `name`, `email`, `message`) VALUES
+(1, 'z', 'z', 'z'),
+(2, 'z', 'z', 'z');
 
 -- --------------------------------------------------------
 
@@ -149,10 +169,9 @@ CREATE TABLE `order_detail` (
 --
 
 INSERT INTO `order_detail` (`Id`, `order_Id`, `pro_id`, `qty`) VALUES
-(1, 1, 2, 1),
-(2, 2, 1, 4),
-(3, 2, 2, 1),
-(4, 3, 1, 1);
+(1, 1, 1, 1),
+(2, 1, 1, 1),
+(3, 2, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -168,6 +187,14 @@ CREATE TABLE `payments` (
   `pay_code` int(20) NOT NULL,
   `pay_date` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `payments`
+--
+
+INSERT INTO `payments` (`pay_id`, `invoice_no`, `amount`, `pay_mode`, `pay_code`, `pay_date`) VALUES
+(1, 0, 20, '', 0, '26 04 2021'),
+(2, 0, 20, '', 0, '26 04 2021');
 
 -- --------------------------------------------------------
 
@@ -207,8 +234,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`pro_id`, `cat_id`, `brand_id`, `pro_name`, `pro_image1`, `pro_image2`, `pro_price`, `pro_des`, `pro_status`) VALUES
-(1, 2, 1, 'Pen', '', '', '7', 'Auto Mart-Online Auto Parts Shop stands as one of the most trusted internet retailers online. Dedication, commitment to quality service, high level of professionalism and product dependability and competitive prices are reasons that underlie our success in the auto industry. Through the years of providing superior quality automotive parts and accessories nationwide, our company has been distinguished as one of the most established auto parts retailers online. We have a team of professionals fervently working to give you a complete and most competitive line of automotive parts and the best customer support as well. Our company upholds its commitment to serve all your car parts needs by continuously replenishing our stock and by continuously improving our services. ', ''),
-(2, 2, 2, 'Pencile', '', '', '5', 'none', '');
+(1, 1, 1, 'Pen', 'signature_fountain_pen_ivory--70079.jpg', '', '10', 'none', '');
 
 --
 -- Indexes for dumped tables
@@ -251,6 +277,12 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `order_detail`
 --
 ALTER TABLE `order_detail`
@@ -288,19 +320,19 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `brand_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `brand_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `buyers`
 --
 ALTER TABLE `buyers`
-  MODIFY `buyer_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `buyer_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `buyer_orders`
 --
 ALTER TABLE `buyer_orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `cart`
@@ -312,19 +344,25 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `order_detail`
 --
 ALTER TABLE `order_detail`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `pay_id` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `pay_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pending_orders`
@@ -336,7 +374,7 @@ ALTER TABLE `pending_orders`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -35,8 +35,7 @@ if(!isset($_SESSION["user"]))
                   <th>Price</th>
                   <th>Picture</th>
                   <th>Status</th>
-                  <th>EDIT</th>
-                  <th>DELETE</th>
+                  <th>Action</th>
                 </tr>
               </thead>
 
@@ -66,8 +65,9 @@ if(!isset($_SESSION["user"]))
                   
                 <td><img width="80" src="images/<?php echo $row['pro_image1'] ?>"></td>
                  <td> Active </td>
-                 <td> <a href="edit_product.php?edit_product=<?php echo $row['pro_id']; ?>"> Edit </td>
-                <td><a href="edit_product.php?delete_pro=<?php echo $row['pro_id'] ?>">DELETE</td>
+                 <td> 
+                  <a href="edit_product.php?edit_product=<?php echo $row['pro_id']; ?>"> <i class="fa fa-edit"></i></a>
+                  <a href="edit_product.php?delete_pro=<?php echo $row['pro_id'] ?>"><i class="fa fa-trash" style="margin-left: 20px"></i></a></td>
                </tr>
                <?php
              }

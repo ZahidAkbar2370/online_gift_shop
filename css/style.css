@@ -21,7 +21,7 @@
 		.info ul li:hover{background-color:#263349}
 		.info ul li a span {font-size:14px; font-weight:700;color: white; padding-left:15px;}
 		.info ul li a sup {color:red; font-weight:700; font-size: 12px;}
-		.navbar{height:100px;border: none; border-radius:0px;background-color: #18202e; margin-bottom: 0px; }
+		.navbar{height:100px;border: none; border-radius:0px;background-color: #002347 !important; margin-bottom: 0px; }
 		.navbar .navbar-header .navbar-brand{position:absolute;overflow:hidden;height: 100%; padding: 0; width: 18%;left:40px;}
 		.navbar .navbar-nav{margin-left:325px; padding: 22px 0;width: 40%;float: left;height: 100%;line-height: 70px;min-height: 99px;}
 		.navbar .navbar-nav li {margin-left:12px;}
@@ -56,7 +56,7 @@
         .mbaner form button:hover {background-color: #ff4f05;color: white; }
         .mbaner form button:focus {background-color: #ff4f05;color: white; }
         .mbaner form button:active {background-color: #ff4f05;color: white; }
-        .footer{background-color: #18202e; min-height: 215px;padding-top: 30px;}
+        .footer{background-color: #002347 !important; min-height: 215px;padding-top: 30px;}
         .footer .fh5{font-size: 18px; color: #868ca7; font-family: sans-serif;}
         .footer .fh5 a{color: white; border-bottom: 2px solid #ff3100}
         .footer .fh5 a:hover{text-decoration: none; border: none; transition: ease-in 0.6s;}

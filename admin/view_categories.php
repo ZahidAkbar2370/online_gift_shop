@@ -35,8 +35,7 @@ if(!isset($_SESSION["user"]))
                 <tr>
                   <th>Category ID</th>
                   <th>Category Name</th>
-                  <th>EDIT</th>
-                  <th>DELETE</th>
+                  <th>Action</th>
                 </tr>
               </thead>
     <?php
@@ -53,8 +52,8 @@ if(!isset($_SESSION["user"]))
                 <tr class="gradeX" align="center">
                   <td><?php echo $cat_id; ?></td>
                   <td><?php echo $cat_name; ?></td>
-                  <td><a href="edit_cat.php?edit_cat=<?php echo $cat_id; ?>">Edit</td>
-                  <td><a href="edit_cat.php?delete_cat=<?php echo $cat_id; ?>">Delete</td>
+                  <td><!-- <a href="edit_cat.php?edit_cat=<?php echo $cat_id; ?>"><i class="fa fa-edit"></i> -->
+                    <a href="edit_cat.php?delete_cat=<?php echo $cat_id; ?>"><i class="fa fa-trash" style="margin-left: 20px"></i></td>
                 </tr>
  <?php } ?>  
  
